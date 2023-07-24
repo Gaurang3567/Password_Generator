@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="./script.js"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ </head>
+ <body onload="load()">
+    <div class="container">
+        <h1>Password Generator</h1 id="pass_gen">
+
+        <div class="inputBox">
+            <input type="text" value="" onchange="" class="passBox" id="passBox">
+            <span class="material-icons" id="copyIcon">content_copy</span>
+            <div class="strenthMeter password-strength-indicator" id="strenthMeter" onchange="changes()"></div>
+        </div>
+        <input type="range"  min="1" max="30" value="0" class="inputSlider"
+        id="inputSlider">
+
+        <div class="row">
+        <p>Password Length</p>
+        <span id="sliderValue"></span>
+        </div>
+        
+        <div class="row">
+            <label for="lowercase">Include Lowercase Letters(a-z)</label>
+            <input type="checkbox" name="lowercase" id="lowercase" class="cb">
+            <input type="text" id="will1" class="tt">
+        </div>
+        <div class="row"> 
+            <label for="uppercase">Include Uppercase Letters(A-Z)</label>
+            <input type="checkbox" name="uppercase" id="uppercase" class="cb">
+            <input type="text" id="will2" class="tt">
+        </div>
+        <div class="row">
+            <label for="Numbers">Include Numbers (0-9)</label>
+            <input type="checkbox" name="Numbers" id="Numbers" class="cb">
+            <input type="text" id="will3" class="tt">
+        </div>
+        <div class="row">
+            <label for="Symbols">Include Symbols (@-*)</label>
+            <input type="checkbox" name="Symbols" id="Symbols" class="cb">
+            <input type="text" id="will4" class="tt">
+        </div>
+        <div class="row">
+            <label for="Symbols">User Selection</label>
+            <div class="dropdown">
+                <button id="btn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Samples Passwords
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a id="option_1" onclick="options1()" href="#">12 characters long (the longer, the better).</a></li>
+                  <li><a id="option_2" onclick="options2()" href="#">Has a combination of upper and lowercase letters, numbers, and special symbols with equal numbers.
+                    <!-- <input type="text" class="ts"> -->
+                  </a></li>
+                  <li><a id="option_3" onclick="options3()" href="#">Password should have at least 2 special symbols</a></li>
+                  <li><a id="option_4" onclick="options4()" href="#">Password Should have at least one character of each</a></li>
+                  <li><a id="option_5" onclick="options5()" href="#">No Repeating Characters</a></li>
+                  <li><a id="option_6" onclick="options6()" href="#">No Consecutive Characters</a></li>
+                  <li><a id="option_7" onclick="options7()" href="#">User Select The Characters By Their Will</a></li>
+                </ul>
+                <input type="number" class="nofocc" id="nofocc" min="0" max="7" value="">
+              </div>
+        </div>
+        
+        <button type="button" class="genBtn" id="genBtn">Generator Password</button>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </body>
+ </html>
